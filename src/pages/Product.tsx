@@ -7,8 +7,8 @@ const apiKey = import.meta.env.VITE_RAPIDAPI_KEY;
 
 export default function Products() {
   const [products, setProducts] = useState<any[]>([]);
-  const [search, setSearch] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(true);
 
   const fetchData = async (search?: string) => {
     try {
@@ -57,13 +57,9 @@ export default function Products() {
           placeholder="Search recipes..."
           className="w-full max-w-md"
           value={search}
-          onChange={(e: any) => setSearch(e.target.value)}
+          onChange={(e: any) => setSearch(String(e.target.value))}
         />
-        <Button
-          type="button"
-          className
-          variant="outline"
-          onClick={() => onSearch()}>
+        <Button type="button" variant="outline" onClick={() => onSearch()}>
           Search
         </Button>
       </div>
@@ -74,7 +70,7 @@ export default function Products() {
           {products.map((item, index) => (
             <ProductCard
               key={index}
-              name={item.name}
+              name={item.name || ''}
               description={item.description || 'No description available'}
               link={`https://tasty.co/recipe/${
                 item.slug || item.name.replace(/\s+/g, '-')

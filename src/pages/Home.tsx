@@ -44,31 +44,6 @@ export default function Home() {
             images, descriptions, and links to full cooking instructions!"
           </p>
         </div>
-        {/* <div className="text-center mb-12">
-          <h1 className="text-5xl font-extrabold mb-4">Welcome to TastyApp</h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Your one-stop platform to discover and try delicious recipes from
-            the internet. Powered by the Tasty API, we bring you culinary
-            inspiration in seconds.
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <Card>
-            <CardContent className="p-6 text-base text-gray-800">
-              <h2 className="text-2xl font-bold mb-4">What is TastyApp?</h2>
-              <p className="mb-4">
-                TastyApp is a recipe search and discovery web application. You
-                can explore a wide variety of dishes, from breakfast to dinner,
-                based on your taste and mood.
-              </p>
-              <p>
-                Just type what you’re craving for and we’ll show you recipes
-                with images, descriptions, and links to full cooking
-                instructions!
-              </p>
-            </CardContent>
-          </Card>
-        </div> */}
       </section>
     </>
   );
